@@ -10,8 +10,8 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
+  title: `${RESUME_DATA.name} | ${RESUME_DATA.about1}`,
+  description: RESUME_DATA.summary1,
 };
 
 export default function Page() {
@@ -20,10 +20,15 @@ export default function Page() {
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
+            <h1 className="text-4xl font-bold">{RESUME_DATA.name}</h1>
+            <br />
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-              {RESUME_DATA.about}
+              {RESUME_DATA.about1}
             </p>
+            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+              {RESUME_DATA.about2}
+            </p>
+            <br />
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
@@ -95,7 +100,10 @@ export default function Page() {
         <Section>
           <h2 className="text-xl font-bold">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
-            {RESUME_DATA.summary}
+            {RESUME_DATA.summary1}
+          </p>
+          <p className="text-pretty font-mono text-sm text-muted-foreground">
+            {RESUME_DATA.summary2}
           </p>
         </Section>
         <Section>
@@ -106,21 +114,13 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
+                      <a
+                        className="hover:underline"
+                        href={work.link}
+                        target="_blank"
+                      >
                         {work.company}
                       </a>
-
-                      <span className="inline-flex gap-x-1">
-                        {work.badges.map((badge) => (
-                          <Badge
-                            variant="secondary"
-                            className="align-middle text-xs"
-                            key={badge}
-                          >
-                            {badge}
-                          </Badge>
-                        ))}
-                      </span>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
                       {work.start} - {work.end}
@@ -184,8 +184,22 @@ export default function Page() {
           </div>
         </Section>
       </section>
+      <br />
+      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+        <p className="mx-auto w-full max-w-2xl text-center">
+          Inspired by{" "}
+          <a
+            href="https://cv.jarocki.me/"
+            target="_blank"
+            className="underline"
+          >
+            Bartosz Jarocki
+          </a>{" "}
+          |{" "}New personal website in development 👨‍💻
+        </p>
+      </section>
 
-      <CommandMenu
+      {/*<CommandMenu
         links={[
           {
             url: RESUME_DATA.personalWebsiteUrl,
@@ -196,7 +210,7 @@ export default function Page() {
             title: socialMediaLink.name,
           })),
         ]}
-      />
+      />*/}
     </main>
   );
 }
