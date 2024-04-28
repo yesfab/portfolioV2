@@ -18,5 +18,8 @@ COPY . .
 # Build the app
 RUN npm run build
 
+# EXPOSE
+EXPOSE 8888
+
 # Run the web service on container startup.
 CMD [ "npm", "start" ]
