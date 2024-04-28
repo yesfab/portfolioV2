@@ -5,7 +5,7 @@ export const RESUME_DATA = {
   initials: "FA",
   location: "Eaubonne, Ile-de-France, France",
   locationLink: "https://www.google.com/maps/place/Eaubonne",
-  about1: "Student full-stack web developer",
+  about1: "Student FullStack web developer",
   about2: "Co-founder & UI/UX Designer & Community Manager of EzHost",
   summary1:
     "Hello world ! My name is Fabien and I'm a student full-stack web developer based near Paris.",
@@ -69,7 +69,12 @@ export const RESUME_DATA = {
   projects: [
     {
       title: "EzHost",
-      techStack: ["Side Project"],
+      techStack: [
+        "Side Project",
+        "Co-Founder",
+        "UI/UX Designer",
+        "Community Manager",
+      ],
       description:
         "The fastest and easiest way to deploy your projects online.",
       link: {

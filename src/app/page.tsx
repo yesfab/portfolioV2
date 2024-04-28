@@ -195,7 +195,7 @@ export default function Page() {
           >
             Bartosz Jarocki
           </a>{" "}
-          |{" "}New personal website in development 👨‍💻
+          |{" "}New personal website under design and development 👨‍💻
         </p>
       </section>
 
