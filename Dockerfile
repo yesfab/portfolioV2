@@ -15,6 +15,9 @@ RUN npm install
 # Copy local code to the container image.
 COPY . .
 
+# Build the app
+RUN npm run build
+
 # EXPOSE
 EXPOSE 3000
 
